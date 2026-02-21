@@ -23,18 +23,27 @@
         <div class="grid grid-cols-3 gap-4 mt-6">
             <div class="bg-white border border-gray-200 p-5 rounded-xl">
                 <p class="text-[#323B49]">Total</p>
-                <p class="text-[#002C5C] text-2xl font-bold">0</p>
+                <p id="total-count" class="text-[#002C5C] text-2xl font-bold">0</p>
             </div>
             <div class="bg-white border border-gray-200 p-5 rounded-xl">
                 <p class="text-[#323B49]">Interview</p>
-                <p class="text-[#10B981] text-2xl font-bold">0</p>
+                <p id="interview-count" class="text-[#10B981] text-2xl font-bold">0</p>
             </div>
             <div class="bg-white border border-gray-200 p-5 rounded-xl">
                 <p class="text-[#323B49]">Rejected</p>
-                <p class="text-[#EF4444] text-2xl font-bold">0</p>
+                <p id="rejected-count" class="text-[#EF4444] text-2xl font-bold">0</p>
             </div>
         </div>
     </header>
-    <hr class="text-gray-200 mt-6">
+    <hr class="text-gray-200 my-6">
+
+    <main>
+        <h3 class="text-[#002C5C] text-2xl font-semibold">Available Jobs</h3>
+        <div class="flex gap-4 mt-4">
+            <button id="all-filter-btn" class="bg-blue-400 px-9 py-2 rounded-lg text-white text-sm">All</button>
+            <button id="interview-filter-btn" class="bg-white border border-gray-200 px-6 py-2 rounded-lg text-sm text-gray-500">Interview</button>
+            <button id="rejected-filter-btn" class="bg-white border border-gray-200 px-6 py-2 rounded-lg text-sm text-gray-500">Rejected</button>
+        </div>
+    </main>
 </body>
 </html>
