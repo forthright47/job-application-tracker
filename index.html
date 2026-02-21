@@ -44,11 +44,14 @@
 
     <main>
         <!-- Buttons for Available Jobs -->
-        <h3 class="text-[#002C5C] text-2xl font-semibold">Available Jobs</h3>
+        <div class="flex justify-between">
+            <h3 class="text-[#002C5C] text-2xl font-semibold">Available Jobs</h3>
+            <p class="text-[#64748B]"><span id="total-jobs">0</span> jobs</p>
+        </div>
         <div class="flex gap-4 mt-4">
-            <button id="all-filter-btn" class="bg-blue-400 px-9 py-2 rounded-lg text-white text-sm">All</button>
-            <button id="interview-filter-btn" class="bg-white border border-gray-200 px-6 py-2 rounded-lg text-sm text-gray-500">Interview</button>
-            <button id="rejected-filter-btn" class="bg-white border border-gray-200 px-6 py-2 rounded-lg text-sm text-gray-500">Rejected</button>
+            <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="bg-blue-400 px-9 py-2 rounded-lg text-white text-sm">All</button>
+            <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="bg-white border border-gray-200 px-6 py-2 rounded-lg text-sm text-gray-500">Interview</button>
+            <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="bg-white border border-gray-200 px-6 py-2 rounded-lg text-sm text-gray-500">Rejected</button>
         </div>
 
         <!-- Cards Section -->
@@ -214,5 +217,7 @@
             </div>
         </section>
     </main>
+
+    <script src="script/script.js"></script>
 </body>
 </html>
