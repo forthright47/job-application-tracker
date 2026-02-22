@@ -147,6 +147,34 @@ mainContainer.addEventListener('click', function(event){
 
         calculateCount();
     }
+
+    // Delete button functionality
+    else if(event.target.classList.contains('btn-delete')){
+        const card = event.target.closest('.card');
+        const jobName = card.querySelector('.job-name').innerText;
+        const cardStatus = card.querySelector('.status').innerText;
+
+        if(cardStatus === 'INTERVIEW'){
+            interviewList = interviewList.filter(item => item.jobName !== jobName);
+        } 
+        else if(cardStatus === 'REJECTED'){
+            rejectedList = rejectedList.filter(item => item.jobName !== jobName);
+        }
+
+        if(currentStatus === 'all-filter-btn'){
+            card.remove();
+        }        
+        else {
+            card.remove();
+            const allCards = allCardsSection.querySelectorAll('.card');
+            allCards.forEach(allCard => {
+                if(allCard.querySelector('.job-name').innerText === jobName){
+                    allCard.remove();
+                }
+            });
+        }
+        calculateCount();
+    }
 })
 
 function renderInterview(){
