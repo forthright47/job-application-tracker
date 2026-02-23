@@ -179,11 +179,11 @@ mainContainer.addEventListener('click', function(event){
 
 function renderInterview(){
     filteredSection.innerHTML = `
-        <div id="no-job" class="flex flex-col items-center justify-center py-20 gap-4 bg-white border border-gray-200 rounded-xl p-6 my-6">
-            <img src="assets/jobs.png" class="w-24 h-24 object-contain">
-            <h3 class="text-[#002C5C] text-2xl font-bold">No jobs available</h3>
-            <p class="text-[#64748B] text-sm">Check back soon for new job opportunities</p>
-        </div>`;
+    <div id="no-job" class="flex flex-col items-center justify-center py-20 gap-4 bg-white border border-gray-200 rounded-xl p-6 my-6 w-full text-center">
+        <img src="assets/jobs.png" class="w-20 h-20 md:w-24 md:h-24 object-contain">
+        <h3 class="text-[#002C5C] text-xl md:text-2xl font-bold">No jobs available</h3>
+        <p class="text-[#64748B] text-xs md:text-sm px-4">Check back soon for new job opportunities</p>
+    </div>`;
 
     for(let interview of interviewList){
         console.log(interview);
@@ -213,11 +213,11 @@ function renderInterview(){
 
 function renderRejected(){
     filteredSection.innerHTML = `
-        <div id="no-job" class="flex flex-col items-center justify-center py-20 gap-4 bg-white border border-gray-200 rounded-xl p-6 my-6">
-            <img src="assets/jobs.png" class="w-24 h-24 object-contain">
-            <h3 class="text-[#002C5C] text-2xl font-bold">No jobs available</h3>
-            <p class="text-[#64748B] text-sm">Check back soon for new job opportunities</p>
-        </div>`;
+    <div id="no-job" class="flex flex-col items-center justify-center py-20 gap-4 bg-white border border-gray-200 rounded-xl p-6 my-6 w-full text-center">
+        <img src="assets/jobs.png" class="w-20 h-20 md:w-24 md:h-24 object-contain">
+        <h3 class="text-[#002C5C] text-xl md:text-2xl font-bold">No jobs available</h3>
+        <p class="text-[#64748B] text-xs md:text-sm px-4">Check back soon for new job opportunities</p>
+    </div>`;
 
     for(let rejected of rejectedList){
         console.log(rejected);

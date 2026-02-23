@@ -25,15 +25,15 @@
     <header class="mt-10">
         <h1 class="text-4xl font-semibold text-[#002C5C]">Job Application Tracker</h1>
         <div class="grid grid-cols-3 gap-4 mt-6">
-            <div class="bg-white border border-gray-200 p-5 rounded-xl space-y-1">
+            <div class="bg-white border border-gray-200 p-4 md:p-5 rounded-xl space-y-1">
                 <p class="text-[#323B49]">Total</p>
                 <p id="total-count" class="text-[#002C5C] text-2xl font-bold">0</p>
             </div>
-            <div class="bg-white border border-gray-200 p-5 rounded-xl space-y-1">
+            <div class="bg-white border border-gray-200 p-4 md:p-5 rounded-xl space-y-1">
                 <p class="text-[#323B49]">Interview</p>
                 <p id="interview-count" class="text-[#10B981] text-2xl font-bold">0</p>
             </div>
-            <div class="bg-white border border-gray-200 p-5 rounded-xl space-y-1">
+            <div class="bg-white border border-gray-200 p-4 md:p-5 rounded-xl space-y-1">
                 <p class="text-[#323B49]">Rejected</p>
                 <p id="rejected-count" class="text-[#EF4444] text-2xl font-bold">0</p>
             </div>
@@ -48,7 +48,7 @@
             <h3 class="text-[#002C5C] text-2xl font-semibold">Available Jobs</h3>
             <p class="text-[#64748B]"><span id="total-jobs">0</span> jobs</p>
         </div>
-        <div class="flex gap-4 mt-4">
+        <div class="flex gap-3 md:gap-4 mt-4">
             <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="bg-blue-400 px-9 py-2 rounded-lg text-white text-sm">All</button>
             <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="bg-white border border-gray-200 px-6 py-2 rounded-lg text-sm text-gray-500">Interview</button>
             <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="bg-white border border-gray-200 px-6 py-2 rounded-lg text-sm text-gray-500">Rejected</button>
@@ -62,7 +62,7 @@
         <!-- Cards Section -->
         <section id="all-cards" class="my-6 space-y-6">
             <!-- Card 1 -->
-            <div class="card flex justify-between bg-white border border-gray-200 rounded-lg p-6">
+            <div class="card flex flex-col md:flex-row md:justify-between bg-white border border-gray-200 rounded-lg p-6">
                 <!-- Left side -->
                 <div class="space-y-3">
                     <h4 class="job-name text-[#002C5C] text-xl font-semibold">Mobile First Corp</h4>
@@ -76,13 +76,13 @@
                     </div>
                 </div>
                 <!-- Right side -->
-                <div>
+                <div class="mt-4 md:mt-0">
                     <button class="btn-delete bg-white border border-red-500 text-red-500 font-semibold px-5 py-2 rounded-lg">Delete</button>
                 </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="card flex justify-between bg-white border border-gray-200 rounded-lg p-6">
+            <div class="card flex flex-col md:flex-row md:justify-between bg-white border border-gray-200 rounded-lg p-6">
                 <!-- Left side -->
                 <div class="space-y-3">
                     <h4 class="job-name text-[#002C5C] text-xl font-semibold">WebFlow Agency</h4>
@@ -96,13 +96,13 @@
                     </div>
                 </div>
                 <!-- Right side -->
-                <div>
+                <div class="mt-4 md:mt-0">
                     <button class="btn-delete bg-white border border-red-500 text-red-500 font-semibold px-5 py-2 rounded-lg">Delete</button>
                 </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="card flex justify-between bg-white border border-gray-200 rounded-lg p-6">
+            <div class="card flex flex-col md:flex-row md:justify-between bg-white border border-gray-200 rounded-lg p-6">
                 <!-- Left side -->
                 <div class="space-y-3">
                     <h4 class="job-name text-[#002C5C] text-xl font-semibold">DataViz Solutions</h4>
@@ -116,13 +116,13 @@
                     </div>
                 </div>
                 <!-- Right side -->
-                <div>
+                <div class="mt-4 md:mt-0">
                     <button class="btn-delete bg-white border border-red-500 text-red-500 font-semibold px-5 py-2 rounded-lg">Delete</button>
                 </div>
             </div>
 
             <!-- Card 4 -->
-            <div class="card flex justify-between bg-white border border-gray-200 rounded-lg p-6">
+            <div class="card flex flex-col md:flex-row md:justify-between bg-white border border-gray-200 rounded-lg p-6">
                 <!-- Left side -->
                 <div class="space-y-3">
                     <h4 class="job-name text-[#002C5C] text-xl font-semibold">CloudFirst Inc</h4>
@@ -136,13 +136,13 @@
                     </div>
                 </div>
                 <!-- Right side -->
-                <div>
+                <div class="mt-4 md:mt-0">
                     <button class="btn-delete bg-white border border-red-500 text-red-500 font-semibold px-5 py-2 rounded-lg">Delete</button>
                 </div>
             </div>
 
             <!-- Card 5 -->
-            <div class="card flex justify-between bg-white border border-gray-200 rounded-lg p-6">
+            <div class="card flex flex-col md:flex-row md:justify-between bg-white border border-gray-200 rounded-lg p-6">
                 <!-- Left side -->
                 <div class="space-y-3">
                     <h4 class="job-name text-[#002C5C] text-xl font-semibold">Innovation Labs</h4>
@@ -156,13 +156,13 @@
                     </div>
                 </div>
                 <!-- Right side -->
-                <div>
+                <div class="mt-4 md:mt-0">
                     <button class="btn-delete bg-white border border-red-500 text-red-500 font-semibold px-5 py-2 rounded-lg">Delete</button>
                 </div>
             </div>
 
             <!-- Card 6 -->
-            <div class="card flex justify-between bg-white border border-gray-200 rounded-lg p-6">
+            <div class="card flex flex-col md:flex-row md:justify-between bg-white border border-gray-200 rounded-lg p-6">
                 <!-- Left side -->
                 <div class="space-y-3">
                     <h4 class="job-name text-[#002C5C] text-xl font-semibold">MegaCorp Solutions</h4>
@@ -176,13 +176,13 @@
                     </div>
                 </div>
                 <!-- Right side -->
-                <div>
+                <div class="mt-4 md:mt-0">
                     <button class="btn-delete bg-white border border-red-500 text-red-500 font-semibold px-5 py-2 rounded-lg">Delete</button>
                 </div>
             </div>
 
             <!-- Card 7 -->
-            <div class="card flex justify-between bg-white border border-gray-200 rounded-lg p-6">
+            <div class="card flex flex-col md:flex-row md:justify-between bg-white border border-gray-200 rounded-lg p-6">
                 <!-- Left side -->
                 <div class="space-y-3">
                     <h4 class="job-name text-[#002C5C] text-xl font-semibold">StartupXYZ</h4>
@@ -196,13 +196,13 @@
                     </div>
                 </div>
                 <!-- Right side -->
-                <div>
+                <div class="mt-4 md:mt-0">
                     <button class="btn-delete bg-white border border-red-500 text-red-500 font-semibold px-5 py-2 rounded-lg">Delete</button>
                 </div>
             </div>
 
             <!-- Card 8 -->
-            <div class="card flex justify-between bg-white border border-gray-200 rounded-lg p-6">
+            <div class="card flex flex-col md:flex-row md:justify-between bg-white border border-gray-200 rounded-lg p-6">
                 <!-- Left side -->
                 <div class="space-y-3">
                     <h4 class="job-name text-[#002C5C] text-xl font-semibold">TechCorp Industries</h4>
@@ -216,7 +216,7 @@
                     </div>
                 </div>
                 <!-- Right side -->
-                <div>
+                <div class="mt-4 md:mt-0">
                     <button class="btn-delete bg-white border border-red-500 text-red-500 font-semibold px-5 py-2 rounded-lg">Delete</button>
                 </div>
             </div>
