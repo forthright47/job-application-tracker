@@ -178,7 +178,12 @@ mainContainer.addEventListener('click', function(event){
 })
 
 function renderInterview(){
-    filteredSection.innerHTML = '';
+    filteredSection.innerHTML = `
+        <div id="no-job" class="flex flex-col items-center justify-center py-20 gap-4 bg-white border border-gray-200 rounded-xl p-6 my-6">
+            <img src="assets/jobs.png" class="w-24 h-24 object-contain">
+            <h3 class="text-[#002C5C] text-2xl font-bold">No jobs available</h3>
+            <p class="text-[#64748B] text-sm">Check back soon for new job opportunities</p>
+        </div>`;
 
     for(let interview of interviewList){
         console.log(interview);
@@ -201,12 +206,18 @@ function renderInterview(){
             <button class="btn-delete bg-white border border-red-500 text-red-500 font-semibold px-5 py-2 rounded-lg">Delete</button>
         </div>
         `
+        document.getElementById('no-job').classList.add('hidden');
         filteredSection.appendChild(div);
     }
 }
 
 function renderRejected(){
-    filteredSection.innerHTML = '';
+    filteredSection.innerHTML = `
+        <div id="no-job" class="flex flex-col items-center justify-center py-20 gap-4 bg-white border border-gray-200 rounded-xl p-6 my-6">
+            <img src="assets/jobs.png" class="w-24 h-24 object-contain">
+            <h3 class="text-[#002C5C] text-2xl font-bold">No jobs available</h3>
+            <p class="text-[#64748B] text-sm">Check back soon for new job opportunities</p>
+        </div>`;
 
     for(let rejected of rejectedList){
         console.log(rejected);
@@ -229,6 +240,7 @@ function renderRejected(){
             <button class="btn-delete bg-white border border-red-500 text-red-500 font-semibold px-5 py-2 rounded-lg">Delete</button>
         </div>
         `
+        document.getElementById('no-job').classList.add('hidden');
         filteredSection.appendChild(div);
     }
 }
