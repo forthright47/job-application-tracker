@@ -19,6 +19,8 @@
             font-family: "Inter", sans-serif;
         }
     </style>
+
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body class="bg-[#F8FAFC] w-[80%] mx-auto">
     <!-- Header Section Starts -->
@@ -48,7 +50,7 @@
             <h3 class="text-[#002C5C] text-2xl font-semibold">Available Jobs</h3>
             <p class="text-[#64748B]"><span id="total-jobs">0</span> jobs</p>
         </div>
-        <div class="flex gap-3 md:gap-4 mt-4">
+        <div id="toggle-btn" class="flex gap-3 md:gap-4 mt-4">
             <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="bg-blue-400 px-9 py-2 rounded-lg text-white text-sm">All</button>
             <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="bg-white border border-gray-200 px-6 py-2 rounded-lg text-sm text-gray-500">Interview</button>
             <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="bg-white border border-gray-200 px-6 py-2 rounded-lg text-sm text-gray-500">Rejected</button>
