@@ -198,7 +198,7 @@ function renderInterview(){
         console.log(interview);
 
         let div = document.createElement('div');
-        div.className = 'card flex justify-between bg-white border border-gray-200 rounded-lg p-6 my-6';
+        div.className = 'card flex flex-col md:flex-row md:justify-between bg-white border border-gray-200 rounded-lg p-6 my-6';
         div.innerHTML = `
         <div class="space-y-3">
             <h4 class="job-name text-[#002C5C] text-xl font-semibold">${interview.jobName}</h4>
@@ -211,7 +211,7 @@ function renderInterview(){
                 <button class="rejected-btn bg-white border border-red-500 text-red-500 font-semibold px-5 py-2 rounded-lg">REJECTED</button>
             </div>
         </div>
-        <div>
+        <div class="mt-4 md:mt-0">
             <button class="btn-delete bg-white border border-red-500 text-red-500 font-semibold px-5 py-2 rounded-lg">Delete</button>
         </div>
         `
@@ -232,7 +232,7 @@ function renderRejected(){
         console.log(rejected);
 
         let div = document.createElement('div');
-        div.className = 'card flex justify-between bg-white border border-gray-200 rounded-lg p-6 my-6';
+        div.className = 'card flex flex-col md:flex-row md:justify-between bg-white border border-gray-200 rounded-lg p-6 my-6';
         div.innerHTML = `
         <div class="space-y-3">
             <h4 class="job-name text-[#002C5C] text-xl font-semibold">${rejected.jobName}</h4>
@@ -245,7 +245,7 @@ function renderRejected(){
                 <button class="rejected-btn bg-white border border-red-500 text-red-500 font-semibold px-5 py-2 rounded-lg">REJECTED</button>
             </div>
         </div>
-        <div>
+        <div class="mt-4 md:mt-0">
             <button class="btn-delete bg-white border border-red-500 text-red-500 font-semibold px-5 py-2 rounded-lg">Delete</button>
         </div>
         `
