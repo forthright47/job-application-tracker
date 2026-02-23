@@ -20,4 +20,16 @@
         font-weight: 600;
         padding: 8px 10px;
     }
+    .stats{
+        padding: 15px 23px 12px 15px;
+    }
+    .stats-title{
+        font-size: 16px;
+    }
+    .stats-number{
+        font-size: 20px;
+    }
+    .job-type{
+        font-size: 14px;
+    }
 }
