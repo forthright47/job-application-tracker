@@ -75,6 +75,18 @@ function toggleStyle(id){
     }
 }
 
+function updateStatusStyle(statusBtn, status){
+    statusBtn.className = 'status px-5 py-2 rounded-lg font-semibold border';
+
+    if(status === 'INTERVIEW'){
+        statusBtn.classList.add('bg-green-100', 'border-green-500', 'text-green-500');
+    } else if(status === 'REJECTED'){
+        statusBtn.classList.add('bg-red-100', 'border-red-500', 'text-red-500');
+    } else {
+        statusBtn.classList.add('bg-blue-100', 'border-blue-100', 'text-[#002C5C]');
+    }
+}
+
 mainContainer.addEventListener('click', function(event){
     // console.log(event.target.parentNode.parentNode);
     // console.log(event.target.classList.contains('interview-btn'));
@@ -91,7 +103,9 @@ mainContainer.addEventListener('click', function(event){
         const notes = parentNode.querySelector('.notes').innerText;
 
         // Change the status
-        parentNode.querySelector('.status').innerText = "INTERVIEW";
+        const statusBtn = parentNode.querySelector('.status');
+        statusBtn.innerText = 'INTERVIEW';
+        updateStatusStyle(statusBtn, 'INTERVIEW');
 
         // console.log(jobName, jobTitle, jobType, status, notes);
         const cardInfo = {
@@ -129,7 +143,9 @@ mainContainer.addEventListener('click', function(event){
         const notes = parentNode.querySelector('.notes').innerText;
 
         // Change the status
-        parentNode.querySelector('.status').innerText = "REJECTED";
+        const statusBtn = parentNode.querySelector('.status');
+        statusBtn.innerText = 'REJECTED';
+        updateStatusStyle(statusBtn, 'REJECTED');
 
         // console.log(jobName, jobTitle, jobType, status, notes);
         const cardInfo = {
@@ -204,7 +220,7 @@ function renderInterview(){
             <h4 class="job-name text-[#002C5C] text-xl font-semibold">${interview.jobName}</h4>
             <p class="job-title text-[#64748B]">${interview.jobTitle}</p>
             <p class="job-type text-[#64748B] mb-5">${interview.jobType}</p>
-            <button class="status bg-blue-100 border border-blue-100 text-[#002C5C] px-5 py-2 rounded-lg">${interview.status}</button>
+            <button class="status px-5 py-2 rounded-lg font-semibold border bg-green-100 border-green-500 text-green-500">${interview.status}</button>
             <p class="notes mt-1.5 text-[#323B49]/80 text-sm">${interview.notes}</œp>
             <div class="flex gap-3">
                 <button class="interview-btn bg-white border border-green-500 text-green-500 font-semibold px-5 py-2 rounded-lg">INTERVIEW</button>
@@ -238,7 +254,7 @@ function renderRejected(){
             <h4 class="job-name text-[#002C5C] text-xl font-semibold">${rejected.jobName}</h4>
             <p class="job-title text-[#64748B]">${rejected.jobTitle}</p>
             <p class="job-type text-[#64748B] mb-5">${rejected.jobType}</p>
-            <button class="status bg-blue-100 border border-blue-100 text-[#002C5C] px-5 py-2 rounded-lg">${rejected.status}</button>
+            <button class="status px-5 py-2 rounded-lg font-semibold border bg-red-100 border-red-500 text-red-500">${rejected.status}</button>
             <p class="notes mt-1.5 text-[#323B49]/80 text-sm">${rejected.notes}</œp>
             <div class="flex gap-3">
                 <button class="interview-btn bg-white border border-green-500 text-green-500 font-semibold px-5 py-2 rounded-lg">INTERVIEW</button>
